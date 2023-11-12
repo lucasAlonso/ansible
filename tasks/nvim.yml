@@ -1,0 +1,15 @@
+- name: Install neovim
+  dnf:
+    name: "neovim"
+  tags:
+    - install
+    - neovim
+    - lazy
+- name: Get Lazy 
+  ansible.builtin.git:
+    repo: 'https://github.com/LazyVim/starter'
+    dest: "{{ lookup('env', 'HOME') }}/.config/nvim"
+  tags:
+    - install
+    - neovim
+    - lazy

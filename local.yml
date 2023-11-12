@@ -8,7 +8,9 @@
       dnf: update_cache=yes
       changed_when: False
   tasks:
+    - include: tasks/ssh.yml
     - include: tasks/core-setup.yml
     - include: tasks/node-setup.yml
     - include: tasks/npm-packages.yml
     - include: tasks/zsh-setup.yml
+    - include: tasks/nvim.yml

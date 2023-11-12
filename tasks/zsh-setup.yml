@@ -31,3 +31,10 @@
     - productivity
     - dotfiles
     - zsh
+- name: Add plugins to Zsh configuration
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    line: "plugins=(git docker)"
+  tags:
+    - zsh
+
